@@ -4,8 +4,9 @@ import { StarBackground } from "@/components/StarBackground";
 import { HeroSection } from "../components/HeroSection";
 import { AboutSection } from "../components/AboutSection";
 import { ServicesSection } from "../components/ServicesSection";
-import { IndustriesSection } from "../components/IndustriesSection";
-import { SkillsSection } from "../components/SkillsSection";
+// import { StatsSection } from "../components/StatsSection";
+// import { CaseStudiesSection } from "../components/CaseStudiesSection";
+// import { TestimonialsSection } from "../components/TestimonialsSection";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
 
@@ -17,15 +18,15 @@ export const Home = () => {
       color: '#F8FAFC',
       overflowX: 'hidden'
     }}>
-      {/* <ThemeToggle /> */}
+      <ThemeToggle />
       <StarBackground />
       <Navbar />
       <main>
         <HeroSection />
-        <AboutSection />
+        {/* <StatsSection /> */}
         <ServicesSection />
-        <IndustriesSection />
-        <SkillsSection />
+        {/* <CaseStudiesSection />
+        <TestimonialsSection /> */}
         <ContactSection />
       </main>
       <Footer />

@@ -8,10 +8,8 @@ export const HeroSection = () => {
         position: 'relative',
         minHeight: '100vh',
         display: 'flex',
-        flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center',
-        padding: '2rem 1rem',
+        padding: '4rem 1rem',
         marginTop: '2rem',
       }}
     >
@@ -19,24 +17,33 @@ export const HeroSection = () => {
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'linear-gradient(180deg, #0B1F3A 0%, #0B1F3A 50%, rgba(30, 41, 59, 0.5) 100%)',
+          background: 'linear-gradient(180deg, #0B1F3A 0%, #0B1F3A 50%, rgba(30, 41, 59, 0.3) 100%)',
           pointerEvents: 'none',
         }}
       />
       
       <div style={{ 
-        maxWidth: '56rem', 
+        maxWidth: '1200px', 
         margin: '0 auto', 
-        textAlign: 'center', 
+        width: '100%',
         zIndex: 10,
-        padding: '0 1rem'
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gap: '4rem',
+        alignItems: 'center'
       }}>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+        {/* Left Content */}
+        <div style={{ 
+          display: 'flex', 
+          flexDirection: 'column', 
+          gap: '1.5rem',
+          textAlign: 'left'
+        }}>
           <h1 style={{ 
-            fontSize: '2.5rem', 
+            fontSize: '3.5rem', 
             fontWeight: 'bold', 
-            paddingTop: '3.5rem',
-            letterSpacing: '-0.025em'
+            letterSpacing: '-0.025em',
+            lineHeight: '1.1'
           }}>
             <span className="opacity-0 animate-fade-in" style={{ color: '#F8FAFC' }}>Hi, I'm</span>
             <span className="opacity-0 animate-fade-in-delay-1" style={{ color: '#22C55E', marginLeft: '0.5rem' }}>
@@ -59,12 +66,9 @@ export const HeroSection = () => {
           <p style={{ 
             fontSize: '1.125rem', 
             color: '#E2E8F0', 
-            maxWidth: '42rem', 
-            margin: '0 auto', 
             opacity: 0, 
             animation: 'fadeIn 1s ease-out 0.9s forwards', 
-            lineHeight: '1.75',
-            padding: '0 1rem'
+            lineHeight: '1.75'
           }}>
             I help businesses increase organic traffic, dominate Google rankings, generate qualified leads, 
             and grow revenue through data-driven SEO strategies. Specialized in Technical SEO, Local SEO, 
@@ -76,24 +80,23 @@ export const HeroSection = () => {
             display: 'flex', 
             flexWrap: 'wrap', 
             gap: '2rem', 
-            justifyContent: 'center',
             padding: '1rem 0',
             opacity: 0,
             animation: 'fadeIn 1s ease-out 1.1s forwards'
           }}>
-            <div style={{ textAlign: 'center' }}>
+            <div style={{ textAlign: 'left' }}>
               <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#22C55E' }}>4+</div>
               <div style={{ color: '#E2E8F0', fontSize: '0.875rem' }}>Years Experience</div>
             </div>
-            <div style={{ textAlign: 'center' }}>
+            <div style={{ textAlign: 'left' }}>
               <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#22C55E' }}>100+</div>
               <div style={{ color: '#E2E8F0', fontSize: '0.875rem' }}>Keywords Ranked</div>
             </div>
-            <div style={{ textAlign: 'center' }}>
+            <div style={{ textAlign: 'left' }}>
               <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#22C55E' }}>30+</div>
               <div style={{ color: '#E2E8F0', fontSize: '0.875rem' }}>UK Businesses Optimized</div>
             </div>
-            <div style={{ textAlign: 'center' }}>
+            <div style={{ textAlign: 'left' }}>
               <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#22C55E' }}>🌍</div>
               <div style={{ color: '#E2E8F0', fontSize: '0.875rem' }}>International SEO</div>
             </div>
@@ -105,8 +108,7 @@ export const HeroSection = () => {
             animation: 'fadeIn 1s ease-out 1.2s forwards', 
             display: 'flex', 
             flexWrap: 'wrap', 
-            gap: '1rem', 
-            justifyContent: 'center' 
+            gap: '1rem'
           }}>
             <a href="#industries" className="btn-primary">
               View Case Studies
@@ -114,6 +116,145 @@ export const HeroSection = () => {
             <a href="/Zeeshan-Umer-Resume.pdf" download className="btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
               Download Resume <Download size={16} />
             </a>
+          </div>
+        </div>
+
+        {/* Right Content - Graph Image */}
+        <div style={{ 
+          display: 'flex', 
+          justifyContent: 'center',
+          alignItems: 'center'
+        }}>
+          <div style={{ 
+            width: '100%',
+            maxWidth: '500px',
+            backgroundColor: 'rgba(30, 41, 59, 0.5)',
+            borderRadius: '1rem',
+            padding: '1.5rem',
+            border: '1px solid rgba(56, 189, 248, 0.1)',
+            position: 'relative'
+          }}>
+            {/* Graph Bars */}
+            <div style={{ 
+              width: '100%',
+              height: '300px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'flex-end',
+              gap: '0.5rem',
+              padding: '1rem 0'
+            }}>
+              <div style={{ display: 'flex', alignItems: 'flex-end', gap: '0.5rem', height: '100%' }}>
+                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.25rem' }}>
+                  <div style={{ 
+                    width: '100%', 
+                    height: '40%', 
+                    backgroundColor: 'rgba(34, 197, 94, 0.3)',
+                    borderRadius: '4px 4px 0 0'
+                  }} />
+                  <span style={{ color: '#E2E8F0', fontSize: '0.6rem' }}>Jan</span>
+                </div>
+                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.25rem' }}>
+                  <div style={{ 
+                    width: '100%', 
+                    height: '55%', 
+                    backgroundColor: 'rgba(34, 197, 94, 0.4)',
+                    borderRadius: '4px 4px 0 0'
+                  }} />
+                  <span style={{ color: '#E2E8F0', fontSize: '0.6rem' }}>Feb</span>
+                </div>
+                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.25rem' }}>
+                  <div style={{ 
+                    width: '100%', 
+                    height: '45%', 
+                    backgroundColor: 'rgba(34, 197, 94, 0.4)',
+                    borderRadius: '4px 4px 0 0'
+                  }} />
+                  <span style={{ color: '#E2E8F0', fontSize: '0.6rem' }}>Mar</span>
+                </div>
+                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.25rem' }}>
+                  <div style={{ 
+                    width: '100%', 
+                    height: '65%', 
+                    backgroundColor: 'rgba(34, 197, 94, 0.5)',
+                    borderRadius: '4px 4px 0 0'
+                  }} />
+                  <span style={{ color: '#E2E8F0', fontSize: '0.6rem' }}>Apr</span>
+                </div>
+                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.25rem' }}>
+                  <div style={{ 
+                    width: '100%', 
+                    height: '70%', 
+                    backgroundColor: 'rgba(34, 197, 94, 0.6)',
+                    borderRadius: '4px 4px 0 0'
+                  }} />
+                  <span style={{ color: '#E2E8F0', fontSize: '0.6rem' }}>May</span>
+                </div>
+                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.25rem' }}>
+                  <div style={{ 
+                    width: '100%', 
+                    height: '85%', 
+                    backgroundColor: '#22C55E',
+                    borderRadius: '4px 4px 0 0',
+                    boxShadow: '0 0 20px rgba(34, 197, 94, 0.3)'
+                  }} />
+                  <span style={{ color: '#E2E8F0', fontSize: '0.6rem' }}>Jun</span>
+                </div>
+                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.25rem' }}>
+                  <div style={{ 
+                    width: '100%', 
+                    height: '80%', 
+                    backgroundColor: 'rgba(34, 197, 94, 0.7)',
+                    borderRadius: '4px 4px 0 0'
+                  }} />
+                  <span style={{ color: '#E2E8F0', fontSize: '0.6rem' }}>Jul</span>
+                </div>
+                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.25rem' }}>
+                  <div style={{ 
+                    width: '100%', 
+                    height: '90%', 
+                    backgroundColor: 'rgba(34, 197, 94, 0.8)',
+                    borderRadius: '4px 4px 0 0'
+                  }} />
+                  <span style={{ color: '#E2E8F0', fontSize: '0.6rem' }}>Aug</span>
+                </div>
+                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.25rem' }}>
+                  <div style={{ 
+                    width: '100%', 
+                    height: '95%', 
+                    backgroundColor: 'rgba(34, 197, 94, 0.9)',
+                    borderRadius: '4px 4px 0 0'
+                  }} />
+                  <span style={{ color: '#E2E8F0', fontSize: '0.6rem' }}>Sep</span>
+                </div>
+              </div>
+              
+              {/* Stats Overlay */}
+              <div style={{
+                position: 'absolute',
+                top: '1rem',
+                right: '1rem',
+                backgroundColor: 'rgba(11, 31, 58, 0.85)',
+                padding: '0.75rem 1rem',
+                borderRadius: '0.5rem',
+                border: '1px solid rgba(56, 189, 248, 0.2)',
+                textAlign: 'center'
+              }}>
+                <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#22C55E' }}>+120%</div>
+                <div style={{ color: '#E2E8F0', fontSize: '0.75rem' }}>Organic Growth</div>
+              </div>
+            </div>
+            
+            {/* Graph Label */}
+            <div style={{ 
+              textAlign: 'center', 
+              color: '#E2E8F0', 
+              fontSize: '0.75rem',
+              marginTop: '0.5rem',
+              opacity: 0.6
+            }}>
+              Organic Traffic Growth Trend
+            </div>
           </div>
         </div>
       </div>
