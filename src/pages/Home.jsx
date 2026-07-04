@@ -9,6 +9,10 @@ import { ServicesSection } from "../components/ServicesSection";
 // import { TestimonialsSection } from "../components/TestimonialsSection";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
+import { ProjectsSection } from "../components/ProjectsSection";
+import { IndustriesSection } from "../components/IndustriesSection";
+import { LogosSlider } from "../components/LogosSlider";
+import { SkillsSection } from "../components/SkillsSection";
 
 export const Home = () => {
   return (
@@ -18,13 +22,17 @@ export const Home = () => {
       color: '#F8FAFC',
       overflowX: 'hidden'
     }}>
-      <ThemeToggle />
+      {/* <ThemeToggle /> */}
       <StarBackground />
       <Navbar />
       <main>
         <HeroSection />
         {/* <StatsSection /> */}
+        <AboutSection />
+        <IndustriesSection />
         <ServicesSection />
+        <SkillsSection />
+        <LogosSlider />
         {/* <CaseStudiesSection />
         <TestimonialsSection /> */}
         <ContactSection />

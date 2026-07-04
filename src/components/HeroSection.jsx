@@ -96,10 +96,10 @@ export const HeroSection = () => {
               <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#22C55E' }}>30+</div>
               <div style={{ color: '#E2E8F0', fontSize: '0.875rem' }}>UK Businesses Optimized</div>
             </div>
-            <div style={{ textAlign: 'left' }}>
+            {/* <div style={{ textAlign: 'left' }}>
               <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#22C55E' }}>🌍</div>
               <div style={{ color: '#E2E8F0', fontSize: '0.875rem' }}>International SEO</div>
-            </div>
+            </div> */}
           </div>
 
           <div style={{ 
@@ -111,10 +111,10 @@ export const HeroSection = () => {
             gap: '1rem'
           }}>
             <a href="#industries" className="btn-primary">
-              View Case Studies
+              View My Work
             </a>
             <a href="/Zeeshan-Umer-Resume.pdf" download className="btn-secondary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
-              Download Resume <Download size={16} />
+              Get in Touch 
             </a>
           </div>
         </div>

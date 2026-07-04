@@ -261,3 +261,98 @@ body {
     justify-content: center;
   }
 }
+
+/* Logo Slider Responsive */
+@media (max-width: 640px) {
+  .logo-slider-container {
+    margin: 0 0.5rem !important;
+  }
+  
+  .logo-slider-arrow {
+    padding: 0.5rem !important;
+  }
+  
+  .logo-slider-arrow svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
+
+/* Smooth scrolling */
+.logo-slider-track {
+  scroll-behavior: smooth;
+}
+
+/* Tool card glow effect */
+.tool-card {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.tool-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(34, 197, 94, 0.1);
+}
+
+/* Dot indicator animation */
+.dot-indicator {
+  transition: all 0.3s ease;
+}
+
+.dot-indicator.active {
+  background-color: #22C55E;
+  width: 2rem;
+}
+
+/* Logo Slider Styles */
+.logo-slider-container {
+  position: relative;
+}
+
+/* Tool card image container */
+.tool-image-container {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 8px;
+}
+
+.tool-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Fallback icon styling */
+.tool-image-container .fallback-icon {
+  font-size: 24px;
+  color: #22C55E;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .tool-image-container {
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+  }
+  
+  .tool-image-container .fallback-icon {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-slider-arrow {
+    padding: 0.5rem !important;
+  }
+  
+  .logo-slider-arrow svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}

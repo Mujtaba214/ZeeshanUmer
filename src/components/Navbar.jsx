@@ -32,10 +32,25 @@ export const Navbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, [isMenuOpen]);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
+
   return (
     <nav
       style={{
         position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
         width: '100%',
         zIndex: 40,
         transition: 'all 0.3s ease',
@@ -52,7 +67,9 @@ export const Navbar = () => {
         padding: '0 1rem',
         display: 'flex',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
+        position: 'relative',
+        zIndex: 45
       }}>
         <a 
           href="#hero" 
@@ -71,10 +88,15 @@ export const Navbar = () => {
           <span style={{ color: '#22C55E', marginLeft: '4px' }}>Umer</span>
         </a>
 
-        <div className="desktop-nav" style={{ 
-          gap: '2rem',
-          alignItems: 'center'
-        }}>
+        {/* Desktop Navigation */}
+        <div 
+          className="desktop-nav" 
+          style={{ 
+            display: 'flex',
+            gap: '2rem',
+            alignItems: 'center'
+          }}
+        >
           {navItems.map((item) => (
             <a
               key={item.name}
@@ -93,21 +115,25 @@ export const Navbar = () => {
           ))}
         </div>
 
+        {/* Mobile Menu Button - Always visible on mobile */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md-hidden"
+          className="mobile-menu-btn"
           style={{ 
             color: '#F8FAFC', 
             zIndex: 50, 
             background: 'none', 
             border: 'none', 
             cursor: 'pointer',
-            display: 'none'
+            padding: '0.5rem',
+            display: 'block', // Always display, but hidden on desktop via CSS
           }}
+          aria-label="Toggle menu"
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
+        {/* Mobile Menu Overlay */}
         {isMenuOpen && (
           <div
             className="mobile-menu"
@@ -125,6 +151,7 @@ export const Navbar = () => {
               alignItems: 'center',
               justifyContent: 'center',
               gap: '2rem',
+              padding: '2rem'
             }}
           >
             {navItems.map((item) => (
@@ -133,9 +160,10 @@ export const Navbar = () => {
                 href={item.href}
                 style={{
                   color: 'rgba(248, 250, 252, 0.8)',
-                  fontSize: '1.25rem',
+                  fontSize: 'clamp(1.25rem, 5vw, 1.5rem)',
                   textDecoration: 'none',
                   transition: 'color 0.3s',
+                  padding: '0.5rem',
                 }}
                 onClick={() => setIsMenuOpen(false)}
                 onMouseEnter={(e) => e.target.style.color = '#22C55E'}
@@ -147,6 +175,35 @@ export const Navbar = () => {
           </div>
         )}
       </div>
+
+      {/* CSS Styles for responsive behavior */}
+      <style jsx>{`
+        /* Hide mobile menu button on desktop */
+        @media (min-width: 768px) {
+          .mobile-menu-btn {
+            display: none !important;
+          }
+        }
+
+        /* Hide desktop nav on mobile */
+        @media (max-width: 767px) {
+          .desktop-nav {
+            display: none !important;
+          }
+        }
+
+        /* Ensure menu button is visible on mobile */
+        @media (max-width: 767px) {
+          .mobile-menu-btn {
+            display: block !important;
+          }
+        }
+
+        /* Prevent body scroll when menu is open */
+        body.no-scroll {
+          overflow: hidden;
+        }
+      `}</style>
     </nav>
   );
 };
