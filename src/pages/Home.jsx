@@ -18,7 +18,7 @@ export const Home = () => {
       color: '#F8FAFC',
       overflowX: 'hidden'
     }}>
-      <StarBackground />
+      {/* <StarBackground /> */}
       <Navbar />
       <main>
         <HeroSection />
