@@ -1,13 +1,13 @@
 // src/components/CaseStudyDetail.jsx
 import { useParams, Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react"; // Add useEffect
 import { caseStudyDetails } from "./caseStudyDetails";
 import {
   BackButton,
   CaseStudyHeader,
   OverviewSection,
   ImageCarousel,
-  BeforeAfterSection,  // Add this
+  BeforeAfterSection,
   ChallengeSolution,
   ResultsSection,
   MetricsSection,
@@ -21,6 +21,19 @@ import {
 export const CaseStudyDetail = () => {
   const { slug } = useParams();
   const data = caseStudyDetails[slug];
+
+  // Scroll to top when component mounts or slug changes
+  useEffect(() => {
+    // Immediate scroll to top
+    window.scrollTo(0, 0);
+    
+    // Also ensure the page starts at top after a small delay (for any layout shifts)
+    const timeoutId = setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+
+    return () => clearTimeout(timeoutId);
+  }, [slug]); // Re-run when slug changes
 
   if (!data) {
     return (
@@ -52,7 +65,7 @@ export const CaseStudyDetail = () => {
         <CaseStudyHeader data={data} />
         <OverviewSection overview={data.overview} />
         <ImageCarousel images={data.images} />
-        <BeforeAfterSection images={data.images} />  {/* Add this */}
+        <BeforeAfterSection images={data.images} />
         <ChallengeSolution challenge={data.challenge} solution={data.solution} />
         <ResultsSection detailedResults={data.detailedResults} />
         <MetricsSection metrics={data.metrics} />
