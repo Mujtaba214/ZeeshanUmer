@@ -1,4 +1,3 @@
-// App.js or Router configuration
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { IndustriesSection } from './components/IndustriesSection';
 import { CaseStudyDetail } from './components/CaseStudyDetail';
