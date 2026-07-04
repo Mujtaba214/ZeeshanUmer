@@ -69,8 +69,8 @@ export const caseStudyDetails = {
       "Google AI Overview Optimization",
     ],
     images: {
-      before: "/projects/Antyres/Semrush before.png",
-      after: "/projects/Antyres/Semrush after.png",
+      before: "/projects/Antyres/Semrush-before.png",
+      after: "/projects/Antyres/Semrush-After.png",
       gallery: [
         "/projects/Antyres/GMB Calls (1).png",
         "/projects/Antyres/GMB Interaction.png",

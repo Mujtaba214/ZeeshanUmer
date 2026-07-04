@@ -6,7 +6,7 @@ const caseStudies = [
     id: "antyres-uk",
     company: "Antyres UK",
     description: "Garage SEO and local service optimization",
-    image: "/projects/antyres.jpg",
+    image: "/projects/Antyres/GSC.png",
     tags: ["Garage SEO", "Local SEO", "Technical SEO", "Citation Building"],
     results: {
       traffic: "+280%",
