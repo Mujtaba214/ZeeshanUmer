@@ -69,13 +69,13 @@ export const caseStudyDetails = {
       "Google AI Overview Optimization",
     ],
     images: {
-      before: "../../public/projects/Antyres/Semrush before.png",
-      after: "../../public/projects/Antyres/Semrush after.png",
+      before: "/projects/Antyres/Semrush before.png",
+      after: "/projects/Antyres/Semrush after.png",
       gallery: [
-        "../../public/projects/Antyres/GMB Calls (1).png",
-        "../../public/projects/Antyres/GMB Interaction.png",
-        // "../../public/projects/Antyres/GMB Interaction (1).png",
-        "../../public/projects/Antyres/GSC.png",
+        "/projects/Antyres/GMB Calls (1).png",
+        "/projects/Antyres/GMB Interaction.png",
+        // "/projects/Antyres/GMB Interaction (1).png",
+        "/projects/Antyres/GSC.png",
       ],
     },
     testimonial:
@@ -156,11 +156,11 @@ export const caseStudyDetails = {
       "Local citation platforms",
     ],
     images: {
-      before: "../../public/projects/Autoveto/GMB Calls.png",
-      after: "../../public/projects/Autoveto/GMB Interaction.png",
+      before: "/projects/Autoveto/GMB Calls.png",
+      after: "/projects/Autoveto/GMB Interaction.png",
       gallery: [
-        "../../public/projects/Autoveto/GMB Interaction.png",
-        "../../public/projects/Autoveto/GSC Stats.png",
+        "/projects/Autoveto/GMB Interaction.png",
+        "/projects/Autoveto/GSC Stats.png",
       ],
     },
     testimonial:
@@ -242,13 +242,13 @@ export const caseStudyDetails = {
       "Local Citation Platforms",
     ],
     images: {
-      before: "../../public/projects/Dominion Driving School/Before Smrush.png",
-      after: "../../public/projects/Dominion Driving School/After Smrush.png",
+      before: "/projects/Dominion Driving School/Before Smrush.png",
+      after: "/projects/Dominion Driving School/After Smrush.png",
       gallery: [
-        "../../public/projects/Dominion Driving School/GA 4 - 1.png",
-        "../../public/projects/Dominion Driving School/GA 4 - 2.png",
-        "../../public/projects/Dominion Driving School/GA 4 - 3.png",
-        "../../public/projects/Dominion Driving School/GSC Stats.png",
+        "/projects/Dominion Driving School/GA 4 - 1.png",
+        "/projects/Dominion Driving School/GA 4 - 2.png",
+        "/projects/Dominion Driving School/GA 4 - 3.png",
+        "/projects/Dominion Driving School/GSC Stats.png",
       ],
     },
     testimonial:
@@ -333,12 +333,12 @@ export const caseStudyDetails = {
       "Local citation platforms",
     ],
     images: {
-      before: "../../public/projects/EmBathrooms/Semrush Before.png",
-      after: "../../public/projects/EmBathrooms/Semrush After.png",
+      before: "/projects/EmBathrooms/Semrush Before.png",
+      after: "/projects/EmBathrooms/Semrush After.png",
       gallery: [
-        "../../public/projects/EmBathrooms/GA 4 1.png",
-        "../../public/projects/EmBathrooms/GA 4 2.png",
-        "../../public/projects/EmBathrooms/GSC.png",
+        "/projects/EmBathrooms/GA 4 1.png",
+        "/projects/EmBathrooms/GA 4 2.png",
+        "/projects/EmBathrooms/GSC.png",
       ],
     },
     testimonial:
@@ -432,17 +432,17 @@ export const caseStudyDetails = {
     ],
     images: {
       before:
-        "../../public/projects/Kent Mobile tyre Services/Semrush Before.png",
+        "/projects/Kent Mobile tyre Services/Semrush Before.png",
       after:
-        "../../public/projects/Kent Mobile Tyre Services/Semrush After.png",
+        "/projects/Kent Mobile Tyre Services/Semrush After.png",
       gallery: [
-        "../../public/projects/Kent Mobile Tyre Services/Calls GMB.png",
-        "../../public/projects/Kent Mobile Tyre Services/GA 4 - 1.png",
-        "../../public/projects/Kent Mobile Tyre Services/GA 4 - 2.png",
-        "../../public/projects/Kent Mobile Tyre Services/GSC Stats.png",
-        "../../public/projects/Kent Mobile Tyre Services/Interaction GMB.png",
-        "../../public/projects/Kent Mobile Tyre Services/Mobile tyre Fitting Kent.png",
-        "../../public/projects/Kent Mobile Tyre Services/Near Me Ranking.png",
+        "/projects/Kent Mobile Tyre Services/Calls GMB.png",
+        "/projects/Kent Mobile Tyre Services/GA 4 - 1.png",
+        "/projects/Kent Mobile Tyre Services/GA 4 - 2.png",
+        "/projects/Kent Mobile Tyre Services/GSC Stats.png",
+        "/projects/Kent Mobile Tyre Services/Interaction GMB.png",
+        "/projects/Kent Mobile Tyre Services/Mobile tyre Fitting Kent.png",
+        "/projects/Kent Mobile Tyre Services/Near Me Ranking.png",
       ],
     },
     testimonial:
@@ -538,15 +538,15 @@ export const caseStudyDetails = {
     ],
     images: {
       before:
-        "../../public/projects/Mobile tyre Services Ltd/Semrush Before.png",
-      after: "../../public/projects/Mobile tyre Services Ltd/Semrush After.png",
+        "/projects/Mobile tyre Services Ltd/Semrush Before.png",
+      after: "/projects/Mobile tyre Services Ltd/Semrush After.png",
       gallery: [
-        "../../public/projects/Mobile tyre Services Ltd/GMB Calls.png",
-        "../../public/projects/Mobile tyre Services Ltd/GMB Interaction.png",
-        "../../public/projects/Mobile tyre Services Ltd/GSC.png",
-        "../../public/projects/Mobile tyre Services Ltd/SERP Ranking 1.png",
-        "../../public/projects/Mobile tyre Services Ltd/SERP Ranking(1).png",
-        "../../public/projects/Mobile tyre Services Ltd/SERP Ranking.png",
+        "/projects/Mobile tyre Services Ltd/GMB Calls.png",
+        "/projects/Mobile tyre Services Ltd/GMB Interaction.png",
+        "/projects/Mobile tyre Services Ltd/GSC.png",
+        "/projects/Mobile tyre Services Ltd/SERP Ranking 1.png",
+        "/projects/Mobile tyre Services Ltd/SERP Ranking(1).png",
+        "/projects/Mobile tyre Services Ltd/SERP Ranking.png",
       ],
     },
     testimonial:
