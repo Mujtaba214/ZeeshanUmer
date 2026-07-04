@@ -434,15 +434,15 @@ export const caseStudyDetails = {
       before:
         "/projects/Kent Mobile tyre Services/Semrush Before.png",
       after:
-        "/projects/Kent Mobile Tyre Services/Semrush After.png",
+        "/projects/Kent Mobile tyre Services/Semrush After.png",
       gallery: [
-        "/projects/Kent Mobile Tyre Services/Calls GMB.png",
-        "/projects/Kent Mobile Tyre Services/GA 4 - 1.png",
-        "/projects/Kent Mobile Tyre Services/GA 4 - 2.png",
-        "/projects/Kent Mobile Tyre Services/GSC Stats.png",
-        "/projects/Kent Mobile Tyre Services/Interaction GMB.png",
-        "/projects/Kent Mobile Tyre Services/Mobile tyre Fitting Kent.png",
-        "/projects/Kent Mobile Tyre Services/Near Me Ranking.png",
+        "/projects/Kent Mobile tyre Services/Calls GMB.png",
+        "/projects/Kent Mobile tyre Services/GA 4 - 1.png",
+        "/projects/Kent Mobile tyre Services/GA 4 - 2.png",
+        "/projects/Kent Mobile tyre Services/GSC Stats.png",
+        "/projects/Kent Mobile tyre Services/Interaction GMB.png",
+        "/projects/Kent Mobile tyre Services/Mobile tyre Fitting Kent.png",
+        "/projects/Kent Mobile tyre Services/Near Me Ranking.png",
       ],
     },
     testimonial:
