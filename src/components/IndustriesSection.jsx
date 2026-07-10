@@ -9,6 +9,20 @@ import {
   Star,
   Clock,
 } from "lucide-react";
+// import poppyLaneThumb from "/projects/Poppylane Clothing/PoppyLaneClothingThumbnail.png";
+// import antyresThumb from "/Antyres Thumbnail.png";
+// import kmtsThumb from "/Kmt Services Thumbnail.png";
+// import mtsThumb from "/Mobile Tyre Services Thumbnail.png";
+// import embThumb from "/EMBathrooms Thumbnail.png";
+// import dmdsThumb from "/Dominion Driving School Thumbnail.png";
+// import avmThumb from "/Autoveto Mot Thumbnail.png";
+// import sstsThumb from "/Sussex Tyre Services Thumbnail.png";
+// import ttshThumb from "/projects/The Tyre Shop Harlo/GSC.png";
+// import mttcThumb from "/Mobile Tyres Team Crawley Thumbnail.png";
+// import { Link } from "react-router-dom";
+
+
+// First, import all images at the top of your file
 import poppyLaneThumb from "/projects/Poppylane Clothing/PoppyLaneClothingThumbnail.png";
 import antyresThumb from "/Antyres Thumbnail.png";
 import kmtsThumb from "/Kmt Services Thumbnail.png";
@@ -19,15 +33,14 @@ import avmThumb from "/Autoveto Mot Thumbnail.png";
 import sstsThumb from "/Sussex Tyre Services Thumbnail.png";
 import ttshThumb from "/projects/The Tyre Shop Harlo/GSC.png";
 import mttcThumb from "/Mobile Tyres Team Crawley Thumbnail.png";
-// import { Link } from "react-router-dom";
 
-
+// Then your caseStudies array
 const caseStudies = [
   {
     id: "poppylane-clothing",
     company: "PoppyLane Clothing",
     description: "eCommerce SEO growth for Shopify fashion store",
-    image: poppyLaneThumb,  // ✅ Works
+    image: poppyLaneThumb,
     tags: ["eCommerce SEO", "Shopify SEO", "Fashion SEO", "Revenue Growth"],
     results: {
       revenue: "+167%",
@@ -168,7 +181,6 @@ const caseStudies = [
     ],
     url: "/case-studies/autoveto-mot",
   },
-
   {
     id: "sussex-tyre-services",
     company: "Sussex Tyre Services",
@@ -232,6 +244,7 @@ const caseStudies = [
     url: "/case-studies/mobile-tyres-team-crawley",
   },
 ];
+
 
 
 export const IndustriesSection = () => {
