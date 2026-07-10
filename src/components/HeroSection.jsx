@@ -214,7 +214,7 @@ export const HeroSection = () => {
               }}
             >
               <img
-                src="/public/seo-consultant-zeeshan.png" // ← Replace with your image path
+                src="/seo-consultant-zeeshan.png" // ← Replace with your image path
                 alt="Organic Growth Chart"
                 style={{
                   width: "100%",
