@@ -10,7 +10,7 @@ export const Footer = () => {
     }}>
       <div style={{ maxWidth: '64rem', margin: '0 auto' }}>
         <p style={{ color: '#E2E8F0', marginBottom: '0.5rem' }}>
-          © 2026 Zeeshan Umer — SEO Specialist | Technical SEO | Local SEO | eCommerce SEO | AI SEO
+          © 2026 Zeeshan Umer — SEO Specialist 
         </p>
         <a
           href="#hero"

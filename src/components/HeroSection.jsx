@@ -80,8 +80,7 @@ export const HeroSection = () => {
               animation: "fadeIn 1s ease-out 0.6s forwards",
             }}
           >
-            SEO Specialist | Technical SEO | Local SEO | eCommerce SEO | AI SEO
-            (AEO & GEO)
+            SEO Specialist
           </h2>
 
           <p
@@ -132,7 +131,7 @@ export const HeroSection = () => {
                   color: "#22C55E",
                 }}
               >
-                100+
+                1000+
               </div>
               <div style={{ color: "#E2E8F0", fontSize: "0.875rem" }}>
                 Keywords Ranked
@@ -146,7 +145,7 @@ export const HeroSection = () => {
                   color: "#22C55E",
                 }}
               >
-                30+
+                50+
               </div>
               <div style={{ color: "#E2E8F0", fontSize: "0.875rem" }}>
                 UK Businesses Optimized
@@ -168,8 +167,9 @@ export const HeroSection = () => {
               View My Work
             </a>
             <a
-              href="/Zeeshan-Umer-Resume.pdf"
-              download
+              href="https://api.whatsapp.com/send?phone=923093692110"
+              target="_blank" // Opens in new tab
+              rel="noopener noreferrer"
               className="btn-secondary"
               style={{
                 display: "inline-flex",
@@ -177,7 +177,7 @@ export const HeroSection = () => {
                 gap: "0.5rem",
               }}
             >
-              Get in Touch
+              Chat on WhatsApp
             </a>
           </div>
         </div>
@@ -201,27 +201,27 @@ export const HeroSection = () => {
               position: "relative",
             }}
           > */}
-            {/* Image Container */}
-            <div
+          {/* Image Container */}
+          <div
+            style={{
+              width: "100%",
+              height: "400px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              overflow: "hidden",
+              borderRadius: "0.5rem",
+            }}
+          >
+            <img
+              src="/seo-consultant-zeeshan.png" // ← Replace with your image path
+              alt="Organic Growth Chart"
               style={{
                 width: "100%",
-                height: "400px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                overflow: "hidden",
-                borderRadius: "0.5rem",
+                height: "100%",
+                objectFit: "contain", // or 'contain' based on your preference
               }}
-            >
-              <img
-                src="/seo-consultant-zeeshan.png" // ← Replace with your image path
-                alt="Organic Growth Chart"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "contain", // or 'contain' based on your preference
-                }}
-              />
+            />
             {/* </div> */}
 
             {/* Stats Overlay (Optional - keep or remove) */}
