@@ -9,20 +9,6 @@ import {
   Star,
   Clock,
 } from "lucide-react";
-// import poppyLaneThumb from "/projects/Poppylane Clothing/PoppyLaneClothingThumbnail.png";
-// import antyresThumb from "/Antyres Thumbnail.png";
-// import kmtsThumb from "/Kmt Services Thumbnail.png";
-// import mtsThumb from "/Mobile Tyre Services Thumbnail.png";
-// import embThumb from "/EMBathrooms Thumbnail.png";
-// import dmdsThumb from "/Dominion Driving School Thumbnail.png";
-// import avmThumb from "/Autoveto Mot Thumbnail.png";
-// import sstsThumb from "/Sussex Tyre Services Thumbnail.png";
-// import ttshThumb from "/projects/The Tyre Shop Harlo/GSC.png";
-// import mttcThumb from "/Mobile Tyres Team Crawley Thumbnail.png";
-// import { Link } from "react-router-dom";
-
-
-// First, import all images at the top of your file
 import poppyLaneThumb from "/projects/Poppylane Clothing/PoppyLaneClothingThumbnail.png";
 import antyresThumb from "/Antyres Thumbnail.png";
 import kmtsThumb from "/Kmt Services Thumbnail.png";
@@ -34,7 +20,6 @@ import sstsThumb from "/Sussex Tyre Services Thumbnail.png";
 import ttshThumb from "/projects/The Tyre Shop Harlo/GSC.png";
 import mttcThumb from "/Mobile Tyres Team Crawley Thumbnail.png";
 
-// Then your caseStudies array
 const caseStudies = [
   {
     id: "poppylane-clothing",
@@ -43,9 +28,9 @@ const caseStudies = [
     image: poppyLaneThumb,
     tags: ["eCommerce SEO", "Shopify SEO", "Fashion SEO", "Revenue Growth"],
     results: {
-      revenue: "+167%",
-      orders: "+170%",
-      users: "+103.5%",
+      traffic: "+240.6%",
+      rankings: "+105%",
+      leads: "+167%",
     },
     keywords: [
       "womens tops Ireland",
@@ -87,8 +72,8 @@ const caseStudies = [
       "Reviews Strategy",
     ],
     results: {
-      calls: "+9.4%",
-      visibility: "+1,765%",
+      traffic: "+1,765%",
+      rankings: "+93%",
       leads: "+429.2%",
     },
     keywords: [
@@ -112,9 +97,9 @@ const caseStudies = [
       "Reviews Strategy",
     ],
     results: {
-      calls: "+35.2%",
-      visibility: "+200%",
-      leads: "+150%",
+      traffic: "+200%",
+      rankings: "+150%",
+      leads: "+35.2%",
     },
     keywords: [
       "Mobile Tyre Fitting London",
@@ -169,9 +154,9 @@ const caseStudies = [
     image: avmThumb,
     tags: ["Local SEO", "GBP Optimization", "Review Management", "Geo Pages"],
     results: {
-      calls: "+60.2%",
-      visibility: "+88.5%",
-      leads: "+48.3%",
+      traffic: "+88.5%",
+      rankings: "+48.3%",
+      leads: "+60.2%",
     },
     keywords: [
       "MOT Test Near Me",
@@ -188,9 +173,9 @@ const caseStudies = [
     image: sstsThumb,
     tags: ["Local SEO", "GBP Optimization", "Citation Building", "On-Page SEO"],
     results: {
-      clicks: "+235%",
-      impressions: "+498%",
-      calls: "172",
+      traffic: "+498%",
+      rankings: "+235%",
+      leads: "+172%",
     },
     keywords: [
       "Tyre fitting Worthing",
@@ -207,9 +192,9 @@ const caseStudies = [
     image: ttshThumb,
     tags: ["Local SEO", "Technical SEO", "Citation Building", "On-Page SEO"],
     results: {
-      users: "+5.9%",
-      sessions: "+8.0%",
-      organicSessions: "+21.4%",
+      traffic: "+21.4%",
+      rankings: "+26.5%",
+      leads: "+105%",
     },
     keywords: [
       "Tyre fitting Harlow",
@@ -231,9 +216,9 @@ const caseStudies = [
       "Citation Building",
     ],
     results: {
-      calls: "+344.8%",
-      interactions: "+242.3%",
-      clicks: "+80.6%",
+      traffic: "+80.6%",
+      rankings: "+242.3%",
+      leads: "+344.8%",
     },
     keywords: [
       "Mobile tyre fitting Crawley",

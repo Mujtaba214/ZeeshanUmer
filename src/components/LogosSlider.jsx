@@ -1,5 +1,12 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
+import gpt from "/gpt.png";
+import GSC from "/GSC.png";
+import ahrefs from "/ahrefs.png";
+import semrush from "/semrush.png";
+import LS from "/LS.png";
+import SF from "/SF.png";
+import wp from "/wp.png";
 
 const tools = [
   { 
@@ -9,38 +16,38 @@ const tools = [
   },
   { 
     name: "Google Search Console", 
-    logo: "https://www.svgrepo.com/show/349501/google-search-console.svg",
-    bg: "rgba(255, 255, 255, 0.05)"
+    logo: GSC,
+    // bg: "rgba(255, 255, 255, 0.05)"
   },
   { 
     name: "Ahrefs", 
-    logo: "https://www.svgrepo.com/show/331368/ahrefs.svg",
-    bg: "rgba(255, 255, 255, 0.05)"
+    logo: ahrefs,
+    // bg: "rgba(255, 255, 255, 0.05)"
   },
   { 
     name: "SEMrush", 
-    logo: "https://www.svgrepo.com/show/331370/semrush.svg",
-    bg: "rgba(255, 255, 255, 0.05)"
+    logo: semrush,
+    // bg: "rgba(255, 255, 255, 0.05)"
   },
   { 
     name: "Screaming Frog", 
-    logo: "https://www.svgrepo.com/show/353380/screaming-frog.svg",
-    bg: "rgba(255, 255, 255, 0.05)"
+    logo: SF,
+    // bg: "rgba(255, 255, 255, 0.05)"
   },
   { 
     name: "ChatGPT", 
-    logo: "https://www.svgrepo.com/show/487818/chatgpt.svg",
-    bg: "rgba(255, 255, 255, 0.05)"
+    logo: gpt,
+    // bg: "rgba(255, 255, 255, 0.05)"
   },
   { 
     name: "Looker Studio", 
-    logo: "https://www.svgrepo.com/show/353830/looker.svg",
-    bg: "rgba(255, 255, 255, 0.05)"
+    logo: LS,
+    // bg: "rgba(255, 255, 255, 0.05)"
   },
   { 
     name: "WordPress", 
-    logo: "https://www.svgrepo.com/show/349462/wordpress.svg",
-    bg: "rgba(255, 255, 255, 0.05)"
+    logo: wp,
+    // bg: "rgba(255, 255, 255, 0.05)"
   },
 ];
 
@@ -199,11 +206,11 @@ export const LogosSlider = () => {
                 key={`${tool.name}-${index}`}
                 style={{
                   minWidth: `calc(${100 / itemsPerView}% - 0.5rem)`,
-                  padding: '0.25rem'
+                  padding: '0.45rem'
                 }}
               >
                 <div style={{
-                  padding: '1.5rem 0.75rem',
+                  padding: '1rem 1rem',
                   textAlign: 'center',
                   transition: 'all 0.4s ease',
                   height: '140px',
@@ -211,7 +218,7 @@ export const LogosSlider = () => {
                   flexDirection: 'column',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  backgroundColor: 'rgba(30, 41, 59, 0.5)',
+                  // backgroundColor: 'rgba(30, 41, 59, 0.5)',
                   border: '1px solid rgba(56, 189, 248, 0.08)',
                   borderRadius: '0.75rem',
                   cursor: 'default'
@@ -230,14 +237,14 @@ export const LogosSlider = () => {
                 }}
                 >
                   <div style={{ 
-                    width: '65px',
-                    height: '65px',
+                    width: '100%',
+                    height: '95px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    marginBottom: '0.75rem',
-                    backgroundColor: 'rgba(255, 255, 255, 0.08)',
-                    borderRadius: '12px',
+                    // marginBottom: '0.75rem',
+                    // backgroundColor: 'rgba(255, 255, 255, 0.08)',
+                    borderRadius: '18px',
                     padding: '10px'
                   }}>
                     <img 
@@ -247,7 +254,9 @@ export const LogosSlider = () => {
                         width: '100%',
                         height: '100%',
                         objectFit: 'contain',
-                        filter: 'brightness(0) invert(1)'
+                        borderRadius: '8px',
+                        // padding: '4px',
+                        // filter: 'brightness(0) invert(1)'
                       }}
                       onError={(e) => {
                         // Fallback if image fails to load - show first letter
