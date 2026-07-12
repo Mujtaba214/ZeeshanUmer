@@ -186,7 +186,7 @@ export const caseStudyDetails = {
     company: "Dominion Driving School",
     title: "Dominion Driving School – Canada SEO Growth Case Study",
     industry: "Education / Driving School",
-    location: "Vancouver, Canada",
+    location: "Waterloo, Canada",
     duration: "8 Months",
     publishedDate: "January 2024",
     overview:

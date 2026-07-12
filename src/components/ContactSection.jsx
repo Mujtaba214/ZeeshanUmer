@@ -6,24 +6,51 @@ import {
   Download,
   Send,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 export const ContactSection = () => {
+  const formRef = useRef(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success' or 'error'
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Add your form submission logic here
-    setTimeout(() => {
+    setSubmitStatus(null);
+
+    // Your EmailJS credentials - Replace these with your actual credentials
+    const serviceId = 'YOUR_SERVICE_ID'; // Get from EmailJS dashboard
+    const templateId = 'YOUR_TEMPLATE_ID'; // Get from EmailJS dashboard
+    const publicKey = 'YOUR_PUBLIC_KEY'; // Get from EmailJS dashboard
+
+    try {
+      const result = await emailjs.sendForm(
+        serviceId,
+        templateId,
+        formRef.current,
+        publicKey
+      );
+
+      if (result.status === 200) {
+        setSubmitStatus('success');
+        setFormData({ name: "", email: "", message: "" });
+        // Reset the form
+        formRef.current.reset();
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setSubmitStatus('error');
+    } finally {
       setIsSubmitting(false);
-      setFormData({ name: "", email: "", message: "" });
-    }, 2000);
+    }
   };
 
   return (
@@ -233,7 +260,7 @@ export const ContactSection = () => {
               >
                 <a
                   href="https://pk.linkedin.com/in/zeeshan-umer-545034268"
-                  target="_blank" // Opens in new tab
+                  target="_blank"
                   rel="noopener noreferrer"
                   style={{
                     padding: "0.625rem 1rem",
@@ -266,7 +293,7 @@ export const ContactSection = () => {
                 </a>
                 <a
                   href="https://api.whatsapp.com/send?phone=923093692110"
-                  target="_blank" // Opens in new tab
+                  target="_blank"
                   rel="noopener noreferrer"
                   style={{
                     padding: "0.625rem 1rem",
@@ -298,7 +325,7 @@ export const ContactSection = () => {
                   <MessageCircle size={18} /> WhatsApp
                 </a>
                 <a
-                  href="/Zeeshan-Umer-Resume.pdf"
+                  href="/Zeeshan Umer CV .pdf"
                   download
                   style={{
                     padding: "0.625rem 1rem",
@@ -353,7 +380,43 @@ export const ContactSection = () => {
             >
               Send a Message
             </h3>
+
+            {/* Success Message */}
+            {submitStatus === 'success' && (
+              <div
+                style={{
+                  padding: "1rem",
+                  backgroundColor: "rgba(34, 197, 94, 0.1)",
+                  border: "1px solid rgba(34, 197, 94, 0.3)",
+                  borderRadius: "0.5rem",
+                  color: "#22C55E",
+                  marginBottom: "1rem",
+                  textAlign: "center",
+                }}
+              >
+                ✅ Message sent successfully! I'll get back to you soon.
+              </div>
+            )}
+
+            {/* Error Message */}
+            {submitStatus === 'error' && (
+              <div
+                style={{
+                  padding: "1rem",
+                  backgroundColor: "rgba(239, 68, 68, 0.1)",
+                  border: "1px solid rgba(239, 68, 68, 0.3)",
+                  borderRadius: "0.5rem",
+                  color: "#EF4444",
+                  marginBottom: "1rem",
+                  textAlign: "center",
+                }}
+              >
+                ❌ Failed to send message. Please try again or email me directly at zumer559@gmail.com
+              </div>
+            )}
+
             <form
+              ref={formRef}
               onSubmit={handleSubmit}
               style={{
                 display: "flex",
@@ -375,6 +438,7 @@ export const ContactSection = () => {
                 </label>
                 <input
                   type="text"
+                  name="user_name"
                   required
                   value={formData.name}
                   onChange={(e) =>
@@ -419,6 +483,7 @@ export const ContactSection = () => {
                 </label>
                 <input
                   type="email"
+                  name="user_email"
                   required
                   value={formData.email}
                   onChange={(e) =>
@@ -462,6 +527,7 @@ export const ContactSection = () => {
                   Your Message <span style={{ color: "#EF4444" }}>*</span>
                 </label>
                 <textarea
+                  name="message"
                   required
                   rows={4}
                   value={formData.message}

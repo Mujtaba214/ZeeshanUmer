@@ -17,7 +17,7 @@ import embThumb from "/EMBathrooms Thumbnail.png";
 import dmdsThumb from "/Dominion Driving School Thumbnail.png";
 import avmThumb from "/Autoveto Mot Thumbnail.png";
 import sstsThumb from "/Sussex Tyre Services Thumbnail.png";
-import ttshThumb from "/projects/The Tyre Shop Harlo/GSC.png";
+import ttshThumb from "/The Tyre Shop Harlow Thumbnail.png";
 import mttcThumb from "/Mobile Tyres Team Crawley Thumbnail.png";
 
 const caseStudies = [

@@ -102,7 +102,7 @@ export const AboutSection = () => {
                 Contact Me
               </a>
               <a
-                href="/Zeeshan-Umer-Resume.pdf"
+                href="/Zeeshan Umer CV .pdf"
                 download
                 className="btn-secondary"
                 style={{ 
@@ -209,7 +209,7 @@ export const AboutSection = () => {
                 color: '#F8FAFC',
                 fontSize: 'clamp(1.125rem, 3vw, 1.25rem)'
               }}>
-                100+
+                1000+
               </h4>
               <p style={{ 
                 color: '#94A3B8', 
@@ -249,7 +249,7 @@ export const AboutSection = () => {
                 color: '#F8FAFC',
                 fontSize: 'clamp(1.125rem, 3vw, 1.25rem)'
               }}>
-                30+
+                50+
               </h4>
               <p style={{ 
                 color: '#94A3B8', 
