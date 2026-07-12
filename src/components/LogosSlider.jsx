@@ -348,7 +348,7 @@ export const LogosSlider = () => {
       </div>
 
       {/* Auto-play indicator */}
-      <div style={{
+      {/* <div style={{
         textAlign: 'center',
         marginTop: '0.5rem',
         color: 'rgba(226, 232, 240, 0.3)',
@@ -356,7 +356,7 @@ export const LogosSlider = () => {
         letterSpacing: '0.5px'
       }}>
         {isAutoPlaying ? '✦ Auto-scrolling' : '⏸ Paused'}
-      </div>
+      </div> */}
     </div>
   );
 };
