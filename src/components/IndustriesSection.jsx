@@ -121,7 +121,7 @@ const caseStudies = [
       leads: "+190%",
     },
     keywords: [
-      "Bathroom Fitters London",
+      "Bathroom Fitters Southport",
       "Bathroom Renovation",
       "Wet Room Installation",
       "Bathroom Design",
@@ -140,7 +140,7 @@ const caseStudies = [
       leads: "+175%",
     },
     keywords: [
-      "Driving School Vancouver",
+      "Driving School Waterloo",
       "Driving Lessons",
       "Behind the Wheel Training",
       "ICBC Approved School",
