@@ -225,31 +225,7 @@ export const HeroSection = () => {
             {/* </div> */}
 
             {/* Stats Overlay (Optional - keep or remove) */}
-            <div
-              style={{
-                position: "absolute",
-                top: "1rem",
-                right: "1rem",
-                backgroundColor: "rgba(11, 31, 58, 0.85)",
-                padding: "0.75rem 1rem",
-                borderRadius: "0.5rem",
-                border: "1px solid rgba(56, 189, 248, 0.2)",
-                textAlign: "center",
-              }}
-            >
-              {/* <div
-                style={{
-                  fontSize: "1.5rem",
-                  fontWeight: "bold",
-                  color: "#22C55E",
-                }}
-              >
-                +120%
-              </div>
-              <div style={{ color: "#E2E8F0", fontSize: "0.75rem" }}>
-                Organic Growth
-              </div> */}
-            </div>
+           
 
             {/* Image Label */}
             {/* <div
