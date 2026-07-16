@@ -360,6 +360,30 @@ export const ContactSection = () => {
             </div>
           </div>
 
+          {/* Google Maps Iframe - Added above the form */}
+          <div
+            style={{
+              borderRadius: "1rem",
+              overflow: "hidden",
+              boxShadow: "0 4px 20px rgba(0, 0, 0, 0.3)",
+              border: "1px solid rgba(56, 189, 248, 0.1)",
+            }}
+          >
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7050398.57309783!2d68.9966984!3d30.36295725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x156be5ebd0da8d%3A0xd7eb5e4d8106ffa1!2sZeeshan%20Umer%20-%20SEO%20Consultant%20-%20LOCAL%20%26%20Ecommerce%20SEO!5e0!3m2!1sen!2s!4v1784210494879!5m2!1sen!2s" 
+              width="100%" 
+              height="250" 
+              style={{
+                border: 0,
+                display: 'block',
+              }} 
+              allowFullScreen 
+              loading="lazy" 
+              referrerPolicy="strict-origin-when-cross-origin"
+              title="Zeeshan Umer - SEO Consultant Location Map"
+            />
+          </div>
+
           {/* Contact Form */}
           <div
             className="card"
