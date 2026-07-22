@@ -192,7 +192,7 @@ export const caseStudyDetails = {
     overview:
       "Dominion Driving School is a Canada-based driving school targeting students and learners looking for professional driving lessons, road test preparation, and driving-related services. I managed the SEO campaign with the goal of improving organic visibility, increasing website traffic, ranking local driving-related keywords, and generating more qualified visitors from Canada.",
     challenge:
-      "Dominion Driving School needed to compete with established driving schools in Vancouver. They had limited online presence and needed to attract both new drivers and those seeking advanced training. The market was highly competitive with many established players.",
+      "Dominion Driving School needed to compete with established driving schools in Waterloo. They had limited online presence and needed to attract both new drivers and those seeking advanced training. The market was highly competitive with many established players.",
     solution:
       "I implemented a multi-channel SEO strategy including content marketing, social media integration, and comprehensive local SEO. Work included website audit, crawlability improvements, indexing issue monitoring, internal linking improvements, site structure optimization, meta title optimization, meta description optimization, heading structure improvements, keyword placement, content optimization, service page improvements, location-based keyword research, local landing page optimization, Google Business Profile support, local citation building, NAP consistency, city-based traffic targeting, content gap analysis, blog/content topic planning, keyword mapping, search intent optimization, FAQ-style content improvements, and entity-based SEO improvements.",
     results: {
@@ -210,7 +210,7 @@ export const caseStudyDetails = {
       aiVisibility: "14 with 30 cited pages",
     },
     keywordsRanked: [
-      "Driving School Vancouver",
+      "Driving School Waterloo",
       "Driving Lessons",
       "Behind the Wheel Training",
       "ICBC Approved School",
@@ -256,7 +256,7 @@ export const caseStudyDetails = {
       ],
     },
     testimonial:
-      "We've seen an incredible increase in student enrollment. Our online presence has made us the trusted choice for driving education in Vancouver. The content strategy has really set us apart from competitors.",
+      "We've seen an incredible increase in student enrollment. Our online presence has made us the trusted choice for driving education in Waterloo. The content strategy has really set us apart from competitors.",
     testimonialAuthor: "Owner, Dominion Driving School",
     tags: ["Local SEO", "Content Marketing", "Social Media", "Review Strategy"],
     url: "/case-studies/dominion-driving-school",
