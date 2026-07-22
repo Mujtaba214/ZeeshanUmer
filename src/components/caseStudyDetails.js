@@ -4,9 +4,9 @@ export const caseStudyDetails = {
     id: "antyres-uk",
     company: "AN Tyres (UK)",
     title: "AN Tyres (UK) – Local SEO & Organic Growth Case Study",
-    metaTitle: "AN Tyres (UK) – Local SEO & Organic Growth Case Study",
+    metaTitle: "Automotive SEO Case Study | UK Local Ranking Growth",
     metaDescription:
-      "See how AN Tyres (UK) achieved 181% traffic growth, 153% keyword ranking improvement and 32.9% more calls through Local SEO and technical optimization.",
+      "Learn how a UK automotive service business improved local rankings, organic visibility and service enquiries through targeted pages and local SEO.",
     industry: "Automotive / Tyre Services",
     location: "Maidstone, UK",
     duration: "8 Months",
@@ -603,9 +603,9 @@ export const caseStudyDetails = {
     id: "poppylane-clothing",
     company: "PoppyLane Clothing",
     title: "PoppyLane Clothing – Ireland eCommerce SEO Growth Case Study",
-    metaTitle: "PoppyLane Clothing – Ireland eCommerce SEO Growth Case Study",
+    metaTitle: "Fashion eCommerce SEO Case Study | Revenue Growth",
     metaDescription:
-      "Explore how PoppyLane Clothing increased revenue from €3K to €14.8K and achieved 597.6% organic shopping growth through Shopify SEO.",
+      "Explore how an online fashion store increased organic traffic, commercial keyword rankings, leads and revenue through Shopify and eCommerce SEO.",
     industry: "Fashion / E-Commerce",
     location: "Ireland",
     duration: "Ongoing",
@@ -938,7 +938,7 @@ export const caseStudyDetails = {
     title: "Mobile Tyres Team Crawley – Local SEO Growth Case Study",
     metaTitle: "Mobile Tyres Team Crawley – Local SEO Growth Case Study",
     metaDescription:
-      "Learn how Mobile Tyres Team Crawley increased GBP calls by 344.8% and improved average position from 42.9 to 17.9 through local SEO.", 
+      "Learn how Mobile Tyres Team Crawley increased GBP calls by 344.8% and improved average position from 42.9 to 17.9 through local SEO.",
     industry: "Automotive / Mobile Tyre Fitting",
     location: "Crawley, UK",
     duration: "Ongoing",
