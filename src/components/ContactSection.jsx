@@ -7,7 +7,7 @@ import {
   Send,
 } from "lucide-react";
 import { useState, useRef } from "react";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 export const ContactSection = () => {
   const formRef = useRef(null);
@@ -25,29 +25,29 @@ export const ContactSection = () => {
     setSubmitStatus(null);
 
     // Your EmailJS credentials - Replace these with your actual credentials
-    const serviceId = 'YOUR_SERVICE_ID'; // Get from EmailJS dashboard
-    const templateId = 'YOUR_TEMPLATE_ID'; // Get from EmailJS dashboard
-    const publicKey = 'YOUR_PUBLIC_KEY'; // Get from EmailJS dashboard
+    const serviceId = "YOUR_SERVICE_ID"; // Get from EmailJS dashboard
+    const templateId = "YOUR_TEMPLATE_ID"; // Get from EmailJS dashboard
+    const publicKey = "YOUR_PUBLIC_KEY"; // Get from EmailJS dashboard
 
     try {
       const result = await emailjs.sendForm(
         serviceId,
         templateId,
         formRef.current,
-        publicKey
+        publicKey,
       );
 
       if (result.status === 200) {
-        setSubmitStatus('success');
+        setSubmitStatus("success");
         setFormData({ name: "", email: "", message: "" });
         // Reset the form
         formRef.current.reset();
       } else {
-        setSubmitStatus('error');
+        setSubmitStatus("error");
       }
     } catch (error) {
-      console.error('Error sending email:', error);
-      setSubmitStatus('error');
+      console.error("Error sending email:", error);
+      setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
     }
@@ -369,18 +369,14 @@ export const ContactSection = () => {
               border: "1px solid rgba(56, 189, 248, 0.1)",
             }}
           >
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7050398.57309783!2d68.9966984!3d30.36295725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x156be5ebd0da8d%3A0xd7eb5e4d8106ffa1!2sZeeshan%20Umer%20-%20SEO%20Consultant%20-%20LOCAL%20%26%20Ecommerce%20SEO!5e0!3m2!1sen!2s!4v1784210494879!5m2!1sen!2s" 
-              width="100%" 
-              height="250" 
-              style={{
-                border: 0,
-                display: 'block',
-              }} 
-              allowFullScreen 
-              loading="lazy" 
-              referrerPolicy="strict-origin-when-cross-origin"
-              title="Zeeshan Umer - SEO Consultant Location Map"
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14160082.48668364!2d58.33958097085328!3d29.94920046165831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x156be5ebd0da8d%3A0xd7eb5e4d8106ffa1!2sZeeshan%20Umer%20-%20SEO%20Consultant%20-%20LOCAL%20%26%20Ecommerce%20SEO!5e0!3m2!1sen!2s!4v1786629501522!5m2!1sen!2s"
+              width="100%"
+              height="450"
+              style={{ border: "0" }}
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
             />
           </div>
 
@@ -406,7 +402,7 @@ export const ContactSection = () => {
             </h3>
 
             {/* Success Message */}
-            {submitStatus === 'success' && (
+            {submitStatus === "success" && (
               <div
                 style={{
                   padding: "1rem",
@@ -423,7 +419,7 @@ export const ContactSection = () => {
             )}
 
             {/* Error Message */}
-            {submitStatus === 'error' && (
+            {submitStatus === "error" && (
               <div
                 style={{
                   padding: "1rem",
@@ -435,7 +431,8 @@ export const ContactSection = () => {
                   textAlign: "center",
                 }}
               >
-                ❌ Failed to send message. Please try again or email me directly at zumer559@gmail.com
+                ❌ Failed to send message. Please try again or email me directly
+                at zumer559@gmail.com
               </div>
             )}
 
