@@ -51,6 +51,19 @@ body {
   text-decoration: none;
 }
 
+.btn-widget {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  border: 2px solid #22C55E;
+  color: #f8fafc;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: transparent;
+  text-decoration: none;
+}
+
 .btn-secondary:hover {
   background-color: rgba(56, 189, 248, 0.1);
   box-shadow: 0 10px 15px -3px rgba(56, 189, 248, 0.2);
@@ -267,11 +280,11 @@ body {
   .logo-slider-container {
     margin: 0 0.5rem !important;
   }
-  
+
   .logo-slider-arrow {
     padding: 0.5rem !important;
   }
-  
+
   .logo-slider-arrow svg {
     width: 16px !important;
     height: 16px !important;
@@ -299,7 +312,7 @@ body {
 }
 
 .dot-indicator.active {
-  background-color: #22C55E;
+  background-color: #22c55e;
   width: 2rem;
 }
 
@@ -330,7 +343,67 @@ body {
 /* Fallback icon styling */
 .tool-image-container .fallback-icon {
   font-size: 24px;
-  color: #22C55E;
+  color: #22c55e;
+}
+
+/* Elfsight Google Reviews Widget Custom Styles */
+
+/* Make widget title white */
+.WidgetTitle__Header-sc-80558b97-2.eEAvqJ {
+  color: white !important;
+}
+
+/* Additional styling for better dark theme integration */
+.elfsight-app-f5417ff7-ea2b-4a06-a88e-384f0e4610ae {
+  color: #F8FAFC !important;
+}
+
+.elfsight-app-f5417ff7-ea2b-4a06-a88e-384f0e4610ae .review-text {
+  color: #E2E8F0 !important;
+}
+
+.elfsight-app-f5417ff7-ea2b-4a06-a88e-384f0e4610ae .reviewer-name {
+  color: #F8FAFC !important;
+}
+
+.elfsight-app-f5417ff7-ea2b-4a06-a88e-384f0e4610ae .review-date {
+  color: #94A3B8 !important;
+}
+
+/* Stars color */
+.elfsight-app-f5417ff7-ea2b-4a06-a88e-384f0e4610ae .star-filled {
+  color: #22C55E !important;
+}
+
+/* Card backgrounds */
+.elfsight-app-f5417ff7-ea2b-4a06-a88e-384f0e4610ae .review-card {
+  background-color: rgba(30, 41, 59, 0.5) !important;
+  border: 1px solid rgba(56, 189, 248, 0.1) !important;
+}
+
+/* Button styling */
+.elfsight-app-f5417ff7-ea2b-4a06-a88e-384f0e4610ae .btn {
+  background-color: #22C55E !important;
+  color: #F8FAFC !important;
+}
+
+.elfsight-app-f5417ff7-ea2b-4a06-a88e-384f0e4610ae .btn:hover {
+  background-color: #16A34A !important;
+}
+
+/* Widget container - make it transparent to match theme */
+.elfsight-app-f5417ff7-ea2b-4a06-a88e-384f0e4610ae {
+  background: transparent !important;
+}
+
+/* Remove any white backgrounds */
+.elfsight-app-f5417ff7-ea2b-4a06-a88e-384f0e4610ae * {
+  background: transparent !important;
+}
+
+/* But keep card backgrounds */
+.elfsight-app-f5417ff7-ea2b-4a06-a88e-384f0e4610ae .review-card {
+  background: rgba(30, 41, 59, 0.5) !important;
 }
 
 /* Responsive adjustments */
@@ -340,7 +413,7 @@ body {
     height: 40px;
     padding: 4px;
   }
-  
+
   .tool-image-container .fallback-icon {
     font-size: 18px;
   }
@@ -350,7 +423,7 @@ body {
   .logo-slider-arrow {
     padding: 0.5rem !important;
   }
-  
+
   .logo-slider-arrow svg {
     width: 16px !important;
     height: 16px !important;

@@ -9,15 +9,18 @@ import { ProjectsSection } from "../components/ProjectsSection";
 import { IndustriesSection } from "../components/IndustriesSection";
 import { LogosSlider } from "../components/LogosSlider";
 import { SkillsSection } from "../components/SkillsSection";
+import { GoogleReviewsSection } from "../components/GoogleReviewsSection";
 
 export const Home = () => {
   return (
-    <div style={{ 
-      minHeight: '100vh', 
-      backgroundColor: '#0B1F3A', 
-      color: '#F8FAFC',
-      overflowX: 'hidden'
-    }}>
+    <div
+      style={{
+        minHeight: "100vh",
+        backgroundColor: "#0B1F3A",
+        color: "#F8FAFC",
+        overflowX: "hidden",
+      }}
+    >
       {/* <StarBackground /> */}
       <Navbar />
       <main>
@@ -27,6 +30,7 @@ export const Home = () => {
         <ServicesSection />
         <SkillsSection />
         <LogosSlider />
+        <GoogleReviewsSection />
         <ContactSection />
       </main>
       <Footer />
