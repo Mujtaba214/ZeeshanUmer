@@ -6,48 +6,54 @@ import {
   Download,
   Send,
 } from "lucide-react";
-import { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
+import { useState } from "react";
+import { db } from "../firebaseConfig";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 export const ContactSection = () => {
-  const formRef = useRef(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null); // 'success' or 'error'
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
 
-    // Your EmailJS credentials - Replace these with your actual credentials
-    const serviceId = "YOUR_SERVICE_ID"; // Get from EmailJS dashboard
-    const templateId = "YOUR_TEMPLATE_ID"; // Get from EmailJS dashboard
-    const publicKey = "YOUR_PUBLIC_KEY"; // Get from EmailJS dashboard
-
     try {
-      const result = await emailjs.sendForm(
-        serviceId,
-        templateId,
-        formRef.current,
-        publicKey,
-      );
-
-      if (result.status === 200) {
-        setSubmitStatus("success");
-        setFormData({ name: "", email: "", message: "" });
-        // Reset the form
-        formRef.current.reset();
-      } else {
-        setSubmitStatus("error");
+      // Simple validation
+      if (!formData.name || !formData.email || !formData.message) {
+        throw new Error("Please fill in all fields");
       }
+
+      // Add form data to Firestore
+      const docRef = await addDoc(collection(db, "contacts"), {
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        message: formData.message.trim(),
+        timestamp: serverTimestamp(),
+        source: "Portfolio Website",
+        status: "New",
+        createdAt: new Date().toISOString()
+      });
+
+      console.log("Message saved with ID: ", docRef.id);
+      
+      setSubmitStatus("success");
+      setFormData({ name: "", email: "", message: "" });
+      
     } catch (error) {
-      console.error("Error sending email:", error);
+      console.error("Error saving message: ", error);
       setSubmitStatus("error");
+      
+      // More specific error messages
+      if (error.code === "permission-denied") {
+        setSubmitStatus("permission-error");
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -97,16 +103,14 @@ export const ContactSection = () => {
             marginTop: "0",
           }}
         >
-          {/* Contact Info - Now on top for mobile */}
+          {/* Contact Info */}
           <div
             style={{
               display: "flex",
               flexDirection: "column",
               gap: "clamp(1.5rem, 3vw, 2rem)",
-              order: window.innerWidth < 768 ? 0 : 0,
             }}
           >
-            {/* Contact Details */}
             <div
               style={{
                 display: "grid",
@@ -240,7 +244,6 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            {/* Social Links */}
             <div>
               <h4
                 style={{
@@ -360,7 +363,7 @@ export const ContactSection = () => {
             </div>
           </div>
 
-          {/* Google Maps Iframe - Added above the form */}
+          {/* Google Maps Iframe - Fixed DOM properties */}
           <div
             style={{
               borderRadius: "1rem",
@@ -374,9 +377,10 @@ export const ContactSection = () => {
               width="100%"
               height="450"
               style={{ border: "0" }}
-              allowfullscreen=""
+              allowFullScreen=""
               loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
+              referrerPolicy="strict-origin-when-cross-origin"
+              title="Zeeshan Umer - SEO Consultant Location"
             />
           </div>
 
@@ -418,6 +422,27 @@ export const ContactSection = () => {
               </div>
             )}
 
+            {/* Permission Error */}
+            {submitStatus === "permission-error" && (
+              <div
+                style={{
+                  padding: "1rem",
+                  backgroundColor: "rgba(239, 68, 68, 0.1)",
+                  border: "1px solid rgba(239, 68, 68, 0.3)",
+                  borderRadius: "0.5rem",
+                  color: "#EF4444",
+                  marginBottom: "1rem",
+                  textAlign: "center",
+                }}
+              >
+                ⚠️ Database permission error. Please check Firebase security rules.
+                <br />
+                <span style={{ fontSize: "0.875rem" }}>
+                  Contact me directly at zumer559@gmail.com
+                </span>
+              </div>
+            )}
+
             {/* Error Message */}
             {submitStatus === "error" && (
               <div
@@ -437,7 +462,6 @@ export const ContactSection = () => {
             )}
 
             <form
-              ref={formRef}
               onSubmit={handleSubmit}
               style={{
                 display: "flex",
@@ -459,7 +483,6 @@ export const ContactSection = () => {
                 </label>
                 <input
                   type="text"
-                  name="user_name"
                   required
                   value={formData.name}
                   onChange={(e) =>
@@ -476,7 +499,6 @@ export const ContactSection = () => {
                     outline: "none",
                     transition: "all 0.3s",
                     fontSize: "clamp(0.9rem, 1.5vw, 1rem)",
-                    WebkitAppearance: "none",
                   }}
                   placeholder="Your Name"
                   onFocus={(e) => {
@@ -504,7 +526,6 @@ export const ContactSection = () => {
                 </label>
                 <input
                   type="email"
-                  name="user_email"
                   required
                   value={formData.email}
                   onChange={(e) =>
@@ -521,7 +542,6 @@ export const ContactSection = () => {
                     outline: "none",
                     transition: "all 0.3s",
                     fontSize: "clamp(0.9rem, 1.5vw, 1rem)",
-                    WebkitAppearance: "none",
                   }}
                   placeholder="Your Email"
                   onFocus={(e) => {
@@ -548,7 +568,6 @@ export const ContactSection = () => {
                   Your Message <span style={{ color: "#EF4444" }}>*</span>
                 </label>
                 <textarea
-                  name="message"
                   required
                   rows={4}
                   value={formData.message}
@@ -615,6 +634,7 @@ export const ContactSection = () => {
                     e.currentTarget.style.transform = "translateY(0)";
                   }
                 }}
+                disabled={isSubmitting}
               >
                 {isSubmitting ? (
                   <>
@@ -640,36 +660,13 @@ export const ContactSection = () => {
         </div>
       </div>
 
-      {/* Add spinning animation for loading state */}
-      <style jsx>{`
+      <style>{`
         @keyframes spin {
           from {
             transform: rotate(0deg);
           }
           to {
             transform: rotate(360deg);
-          }
-        }
-
-        @media (max-width: 640px) {
-          .contact-section {
-            padding: 2.5rem 0.75rem;
-          }
-
-          .contact-info-grid {
-            grid-template-columns: 1fr !important;
-          }
-        }
-
-        @media (min-width: 768px) {
-          .contact-grid {
-            grid-template-columns: 1fr 1fr !important;
-          }
-        }
-
-        @media (min-width: 1024px) {
-          .contact-grid {
-            gap: 3rem !important;
           }
         }
       `}</style>
